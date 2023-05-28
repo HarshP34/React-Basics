@@ -1,39 +1,2102 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-// JSX
-const Title = () => (
-  <h1 className="head" tabIndex={1}>
-    Namste React Using JSX🚀
-  </h1>
-);
-
-const elem = <span>React element</span>;
-
-const data = 1000;
-
-//React Component
-
-//Functional Component = A function that returns jsx code or react elements that is called functional component.
-
-//Component Composition(Component inside Component)
-const HeadingComponent = () => (
-  <>
-    {/* React Fragmentation */}
-    <div id="container">
-      {Title()} {/* React COmponent writting methods*/}
-      <Title />
-      <h1 className="heading">Namste React Functional Component</h1>
+/**
+ * header
+ * - nav 
+ * -logo
+ * Body
+ * - search
+ * - restaurant container
+ * - restaurqnt cards
+ *   - Image
+ *   - name of the restaurant, Star ratings, cuisine, delivery time
+ * footer
+ * -copyrights
+ * - links
+ * - Address
+ * - contact
+ */
+const Header = () => {
+  return (
+    <div className="header">
+    <div className="logo-container">
+      <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDS_PVlJ7o1x2WjOkqCn4ZolEXLWN6eYcFbQ&usqp=CAU"></img>
     </div>
-    <div id="container 2">
-      <Title></Title>
-      <h1 id="title 2"> Title 2</h1>
+    <div className="nav-items">
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Cart</li>
+      </ul>
     </div>
-  </>
-);
+    </div>
+  )
+}
 
-//React Fragments = If we have to use two div in the jsx then we use it
+const cards = [
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "409152",
+      "name": "La Pino'z Pizza",
+      "uuid": "28086814-fb0e-4412-ac90-77c4bb592030",
+      "city": "10",
+      "area": "Nava Wadaj",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "e02kgxw17hyehnurt5bk",
+      "cuisines": [
+        "Pizzas",
+        "Pastas",
+        "Italian",
+        "Desserts",
+        "Beverages"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 40000,
+      "costForTwoString": "₹400 FOR TWO",
+      "deliveryTime": 27,
+      "minDeliveryTime": 27,
+      "maxDeliveryTime": 27,
+      "slaString": "27 MINS",
+      "lastMileTravel": 5,
+      "slugs": {
+        "restaurant": "lapinoz-pizza-naranpura-naranpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "SHIVALIK SQUARE, SHOP NO 6, BESIDES PANTALOON, NAVA VADJ, AHMEDABAD",
+      "locality": "Shivalik Square",
+      "parentId": 4961,
+      "unserviceable": false,
+      "veg": true,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 3900,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 3900,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "3900",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6675056~p=1~eid=00000188-61be-7fe3-7c69-2dd2005a0100",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "5 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "15% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "409152",
+        "deliveryTime": 27,
+        "minDeliveryTime": 27,
+        "maxDeliveryTime": 27,
+        "lastMileTravel": 5,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "4.0",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "690005",
+      "name": "Shree Mohanthal Bhojanalay",
+      "uuid": "b814aabf-1018-4ff2-b2be-0030bbf21bc1",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "100+ ratings",
+      "cloudinaryImageId": "f34657e4f398eec0e714971b58f8be69",
+      "cuisines": [
+        "North Indian",
+        "Chinese",
+        "Gujarati",
+        "Biryani"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 900,
+      "costForTwoString": "₹9 FOR TWO",
+      "deliveryTime": 16,
+      "minDeliveryTime": 16,
+      "maxDeliveryTime": 16,
+      "slaString": "16 MINS",
+      "lastMileTravel": 0.800000011920929,
+      "slugs": {
+        "restaurant": "shree-mohanthal-bhojanalay-navrangpura-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "SHOP NO. 5, P.K. HOUSE, B/H M.J. LIBRARY,  ASHRAM ROAD, ELLISBRIDGE, AHMEDABAD,-380006",
+      "locality": "Ashram road",
+      "parentId": 410281,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": "Closes soon"
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "0.8 kms",
+      "hasSurge": false,
+      "sla": {
+        "restaurantId": "690005",
+        "deliveryTime": 16,
+        "minDeliveryTime": 16,
+        "maxDeliveryTime": 16,
+        "lastMileTravel": 0.800000011920929,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "3.8",
+      "totalRatings": 100,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "52630",
+      "name": "McDonald's",
+      "uuid": "c0d944d0-9dc4-40b6-bb90-8979dca113c7",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "10000+ ratings",
+      "cloudinaryImageId": "ee5f8e06b300efc07c9fe3f4df40dfc4",
+      "cuisines": [
+        "Burgers",
+        "Beverages",
+        "Cafe",
+        "Desserts"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 40000,
+      "costForTwoString": "₹400 FOR TWO",
+      "deliveryTime": 15,
+      "minDeliveryTime": 15,
+      "maxDeliveryTime": 15,
+      "slaString": "15 MINS",
+      "lastMileTravel": 1.5,
+      "slugs": {
+        "restaurant": "mcdonalds-city-gold-multiplex-ashram-road-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "City Gold Multiplex, Ground Floor, Ashram Road, Ahmedabad 380009.",
+      "locality": "City Gold Multiplex, Ashram Road",
+      "parentId": 630,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.5 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "52630",
+        "deliveryTime": 15,
+        "minDeliveryTime": 15,
+        "maxDeliveryTime": 15,
+        "lastMileTravel": 1.5,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "4.2",
+      "totalRatings": 10000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "698049",
+      "name": "TEA POST",
+      "uuid": "c88554e5-08b1-485f-8cd6-f491316c6e11",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "Too Few Ratings",
+      "cloudinaryImageId": "585fa3bec86beeaa6a4eb1d418eccd58",
+      "cuisines": [
+        "Beverages",
+        "Snacks",
+        "Fast Food"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 20000,
+      "costForTwoString": "₹200 FOR TWO",
+      "deliveryTime": 26,
+      "minDeliveryTime": 26,
+      "maxDeliveryTime": 26,
+      "slaString": "26 MINS",
+      "lastMileTravel": 3.700000047683716,
+      "slugs": {
+        "restaurant": "tea-post-navrangpura-navrangpura-5",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "GF-05,SHIVALIK PLAZA,OPP.A.M.A  CENTER,PANJARA POLE,NR.ATIRA  POLYTECHNIC,IIM  ROAD,AMBAWADI,AHMEDABAD-380015",
+      "locality": "Shivalik Plaza",
+      "parentId": 4509,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2900,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2900,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2900",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6859088~p=13~eid=00000188-61be-7fe3-7c69-2dd6005a0d67",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "3.7 kms",
+      "hasSurge": false,
+      "sla": {
+        "restaurantId": "698049",
+        "deliveryTime": 26,
+        "minDeliveryTime": 26,
+        "maxDeliveryTime": 26,
+        "lastMileTravel": 3.700000047683716,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "--",
+      "totalRatings": 0,
+      "new": true
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "81814",
+      "name": "Burger King",
+      "uuid": "10083576-d32d-4a0e-8a82-3236ef342a19",
+      "city": "10",
+      "area": "Ellisbridge",
+      "totalRatingsString": "10000+ ratings",
+      "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+      "cuisines": [
+        "Burgers",
+        "American",
+        "Salads",
+        "Beverages",
+        "Chaat"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 35000,
+      "costForTwoString": "₹350 FOR TWO",
+      "deliveryTime": 19,
+      "minDeliveryTime": 19,
+      "maxDeliveryTime": 19,
+      "slaString": "19 MINS",
+      "lastMileTravel": 1.7000000476837158,
+      "slugs": {
+        "restaurant": "burger-king-parimal-garden-naranpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "SHOP # 5, GR FLR, THIRD EYE 2,PANCHAVATI CIRCLE, OPP PARIMAL GARDEN,AHMADABAD-382424",
+      "locality": "3rd Eye II,CG Road",
+      "parentId": 166,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.7 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "EVERY ITEM",
+        "subHeader": "@ ₹129",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "81814",
+        "deliveryTime": 19,
+        "minDeliveryTime": 19,
+        "maxDeliveryTime": 19,
+        "lastMileTravel": 1.7000000476837158,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "4.1",
+      "totalRatings": 10000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "359718",
+      "name": "Super Dawat Tawa Fry Centre",
+      "uuid": "ccb48313-7656-4618-96bb-2356677f0a98",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "ye0cuamd3narriqobmrq",
+      "cuisines": [
+        "North Indian",
+        "Tandoor",
+        "Biryani",
+        "Seafood"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 30000,
+      "costForTwoString": "₹300 FOR TWO",
+      "deliveryTime": 15,
+      "minDeliveryTime": 15,
+      "maxDeliveryTime": 15,
+      "slaString": "15 MINS",
+      "lastMileTravel": 1.7000000476837158,
+      "slugs": {
+        "restaurant": "super-dawat-tawa-fry-centre-naranpura-naranpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "2, Ground Floor, Ambika Niwas Complex, Behind Indusind Bank, Ashram Road, Ahmedabad-380009",
+      "locality": "Naranpura",
+      "parentId": 197371,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.7 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "20% OFF",
+        "subHeader": "ABOVE ₹600",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "359718",
+        "deliveryTime": 15,
+        "minDeliveryTime": 15,
+        "maxDeliveryTime": 15,
+        "lastMileTravel": 1.7000000476837158,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "3.6",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "252216",
+      "name": "Iqbal Hotel-Since 1947",
+      "uuid": "faa0a25c-8864-4aae-914d-068b8b1a1fed",
+      "city": "10",
+      "area": "Sarkhej",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "hnpxjlmt791zx0hiko74",
+      "cuisines": [
+        "North Indian",
+        "Mughlai",
+        "Chinese",
+        "Biryani"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 40000,
+      "costForTwoString": "₹400 FOR TWO",
+      "deliveryTime": 32,
+      "minDeliveryTime": 32,
+      "maxDeliveryTime": 32,
+      "slaString": "32 MINS",
+      "lastMileTravel": 8.800000190734863,
+      "slugs": {
+        "restaurant": "iqbal-hotel-sarkhej-sarkhej",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Aman plaza Opp lokhandwala party plot Near canal Fatehwadi Ahmedabad",
+      "locality": "Fatehwadi",
+      "parentId": 416449,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 5700,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 5700,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "5700",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6858979~p=7~eid=00000188-61be-7fe3-7c69-2dd4005a0754",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "8.8 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹150 OFF",
+        "subHeader": "ABOVE ₹499",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "252216",
+        "deliveryTime": 32,
+        "minDeliveryTime": 32,
+        "maxDeliveryTime": 32,
+        "lastMileTravel": 8.800000190734863,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "4.0",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "108879",
+      "name": "Jay Jalaram Parotha House",
+      "uuid": "994e73e1-7c7c-4ad9-87e7-ecfecd4e36fa",
+      "city": "10",
+      "area": "Ellisbridge",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "xknto9nqbz7zjjsnnchr",
+      "cuisines": [
+        "Thalis",
+        "Gujarati",
+        "North Indian",
+        "Punjabi"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 25000,
+      "costForTwoString": "₹250 FOR TWO",
+      "deliveryTime": 13,
+      "minDeliveryTime": 13,
+      "maxDeliveryTime": 13,
+      "slaString": "13 MINS",
+      "lastMileTravel": 0.30000001192092896,
+      "slugs": {
+        "restaurant": "jay-jalaram-parotha-house-ashram-road-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Capital Commercial Centre, Near UCO Bank, Ashram Road, Ahmedabad",
+      "locality": "Ashram Road",
+      "parentId": 7628,
+      "unserviceable": false,
+      "veg": true,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": "Closes soon"
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "0.3 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "108879",
+        "deliveryTime": 13,
+        "minDeliveryTime": 13,
+        "maxDeliveryTime": 13,
+        "lastMileTravel": 0.30000001192092896,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "3.9",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "252216",
+      "name": "Iqbal Hotel-Since 1947",
+      "uuid": "faa0a25c-8864-4aae-914d-068b8b1a1fed",
+      "city": "10",
+      "area": "Sarkhej",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "hnpxjlmt791zx0hiko74",
+      "cuisines": [
+        "North Indian",
+        "Mughlai",
+        "Chinese",
+        "Biryani"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 40000,
+      "costForTwoString": "₹400 FOR TWO",
+      "deliveryTime": 32,
+      "minDeliveryTime": 32,
+      "maxDeliveryTime": 32,
+      "slaString": "32 MINS",
+      "lastMileTravel": 8.800000190734863,
+      "slugs": {
+        "restaurant": "iqbal-hotel-sarkhej-sarkhej",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Aman plaza Opp lokhandwala party plot Near canal Fatehwadi Ahmedabad",
+      "locality": "Fatehwadi",
+      "parentId": 416449,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 5700,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 5700,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "5700",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6858979~p=7~eid=00000188-61e4-3a1f-7b60-a1f000460735",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "8.8 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹150 OFF",
+        "subHeader": "ABOVE ₹499",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "252216",
+        "deliveryTime": 32,
+        "minDeliveryTime": 32,
+        "maxDeliveryTime": 32,
+        "lastMileTravel": 8.800000190734863,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "4.0",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "359871",
+      "name": "Al Baik Fast Food",
+      "uuid": "f92856c5-6102-4a3b-9296-e418ed9a0e5c",
+      "city": "10",
+      "area": "Lal Darwaja",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "frnc9gss5pppow7lnze0",
+      "cuisines": [
+        "Arabian",
+        "Grill",
+        "Pizzas",
+        "Seafood",
+        "Tandoor"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 30000,
+      "costForTwoString": "₹300 FOR TWO",
+      "deliveryTime": 22,
+      "minDeliveryTime": 22,
+      "maxDeliveryTime": 22,
+      "slaString": "22 MINS",
+      "lastMileTravel": 1.5,
+      "slugs": {
+        "restaurant": "al-baik-fast-food-laldarwaja-laldarwaja",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "2441/ 1, Advance Cinema Road, Near Sarav Restaurant, Near Bijli Ghar, Lal Darwaja, Ahmedabad",
+      "locality": "Bhadra Road",
+      "parentId": 28934,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.5 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹100 OFF",
+        "subHeader": "ABOVE ₹599",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "359871",
+        "deliveryTime": 22,
+        "minDeliveryTime": 22,
+        "maxDeliveryTime": 22,
+        "lastMileTravel": 1.5,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "4.2",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "121602",
+      "name": "Collegian Sandwich Center",
+      "uuid": "01322bcc-0a70-47e9-bbd2-16a00b423021",
+      "city": "10",
+      "area": "Ellis Bridge",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "lyrcmxjmcv2kgisuzida",
+      "cuisines": [
+        "Street Food"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 20000,
+      "costForTwoString": "₹200 FOR TWO",
+      "deliveryTime": 15,
+      "minDeliveryTime": 15,
+      "maxDeliveryTime": 15,
+      "slaString": "15 MINS",
+      "lastMileTravel": 0.30000001192092896,
+      "slugs": {
+        "restaurant": "collegian-sandwich-center-ellis-bridge-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Near Gujrat College, Ellis Bridge, Ahmedabad",
+      "locality": "",
+      "parentId": 64548,
+      "unserviceable": false,
+      "veg": true,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "0.3 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "121602",
+        "deliveryTime": 15,
+        "minDeliveryTime": 15,
+        "maxDeliveryTime": 15,
+        "lastMileTravel": 0.30000001192092896,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "3.8",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "480586",
+      "name": "Kwality Walls Frozen Dessert and Ice Cream Shop",
+      "uuid": "985ec709-d249-4716-b9d2-171eaea6dfa1",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "500+ ratings",
+      "cloudinaryImageId": "etwzidtydqmhit6hdc5z",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream",
+        "Ice Cream Cakes"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 20000,
+      "costForTwoString": "₹200 FOR TWO",
+      "deliveryTime": 16,
+      "minDeliveryTime": 16,
+      "maxDeliveryTime": 16,
+      "slaString": "16 MINS",
+      "lastMileTravel": 3,
+      "slugs": {
+        "restaurant": "kwality-wall’s-frozen-dessert-&-ice-cream-shop-navrangpura-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "BAIS FOOD SERVICES LLP: UNIT NO 5 & 6, GROUND FLOOR, MADHAV APARTMENTS, PLOT NO 201/201, T P SCHEME NO 20, AHMEDABAD, GUJARAT- 380015 (HUL- I10B301P10711)",
+      "locality": "Madhav Apartments",
+      "parentId": 582,
+      "unserviceable": false,
+      "veg": true,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2900,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2900,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2900",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6794703~p=13~eid=00000188-61e4-3a1f-7b60-a1f200460d15",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "3 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "480586",
+        "deliveryTime": 16,
+        "minDeliveryTime": 16,
+        "maxDeliveryTime": 16,
+        "lastMileTravel": 3,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "4.4",
+      "totalRatings": 500,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "47589",
+      "name": "Pizza Hut",
+      "uuid": "465c31fc-bf1b-4f00-8901-571d1a54c718",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "5000+ ratings",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "cuisines": [
+        "Pizzas"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 35000,
+      "costForTwoString": "₹350 FOR TWO",
+      "deliveryTime": 25,
+      "minDeliveryTime": 25,
+      "maxDeliveryTime": 25,
+      "slaString": "25 MINS",
+      "lastMileTravel": 1.7999999523162842,
+      "slugs": {
+        "restaurant": "pizza-hut-navrangpura-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Shop No-956, ground Floor, City gold Complex, Ashramroad",
+      "locality": "City Gold Complex",
+      "parentId": 721,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.7 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "47589",
+        "deliveryTime": 25,
+        "minDeliveryTime": 25,
+        "maxDeliveryTime": 25,
+        "lastMileTravel": 1.7999999523162842,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "3.7",
+      "totalRatings": 5000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "395939",
+      "name": "KFC",
+      "uuid": "76398c0f-223a-4760-824e-5f5a7ae53f1c",
+      "city": "10",
+      "area": "Paldi & Ambawadi",
+      "totalRatingsString": "1000+ ratings",
+      "cloudinaryImageId": "56c9ab92bd79745fd152a30fa2525426",
+      "cuisines": [
+        "Burgers",
+        "Biryani",
+        "American",
+        "Snacks",
+        "Fast Food"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 40000,
+      "costForTwoString": "₹400 FOR TWO",
+      "deliveryTime": 17,
+      "minDeliveryTime": 17,
+      "maxDeliveryTime": 17,
+      "slaString": "17 MINS",
+      "lastMileTravel": 1.7000000476837158,
+      "slugs": {
+        "restaurant": "kfc-panchwati-cross-paldi-ambawadi",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "KFC- CG Road - GF 7, Ground Floor , 3rd Eye Two, Near Panchwati Cross Road, CG Road, Ahmedabad 380009",
+      "locality": "Panchwati Cross",
+      "parentId": 547,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.7 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "395939",
+        "deliveryTime": 17,
+        "minDeliveryTime": 17,
+        "maxDeliveryTime": 17,
+        "lastMileTravel": 1.7000000476837158,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "4.0",
+      "totalRatings": 1000,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "679926",
+      "name": "Chinese Wok",
+      "uuid": "5e72362b-e1cf-4f0d-bb27-ea7119fc82c4",
+      "city": "10",
+      "area": "Prahlad Nagar",
+      "totalRatingsString": "100+ ratings",
+      "cloudinaryImageId": "d57fcd0f1cb1dc5994c66ad18854d1b3",
+      "cuisines": [
+        "Chinese",
+        "Asian",
+        "Tibetan",
+        "Desserts"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 25000,
+      "costForTwoString": "₹250 FOR TWO",
+      "deliveryTime": 25,
+      "minDeliveryTime": 25,
+      "maxDeliveryTime": 25,
+      "slaString": "25 MINS",
+      "lastMileTravel": 6.800000190734863,
+      "slugs": {
+        "restaurant": "chinese-wok-vejalpur-prahlad-nagar",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Shop no 12 B, ground floor, Rivera 30, Rivera arcade building, Pralhad Nagar, Vejalpur, Ahmedabad - 380051",
+      "locality": "Vejalpur",
+      "parentId": 61955,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 4400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 4400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "4400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6680177~p=16~eid=00000188-61e4-3a1f-7b60-a1f30046107c",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "6.8 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "15% OFF",
+        "subHeader": "ABOVE ₹800",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "679926",
+        "deliveryTime": 25,
+        "minDeliveryTime": 25,
+        "maxDeliveryTime": 25,
+        "lastMileTravel": 6.800000190734863,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "3.9",
+      "totalRatings": 100,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "513580",
+      "name": "Shree Marutinandan",
+      "uuid": "d4502a3d-c220-4a7c-bc6a-721b0273f25b",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "100+ ratings",
+      "cloudinaryImageId": "nxprgfxk9nbskhtjseoz",
+      "cuisines": [
+        "Gujarati",
+        "North Indian",
+        "Rajasthani"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 25000,
+      "costForTwoString": "₹250 FOR TWO",
+      "deliveryTime": 18,
+      "minDeliveryTime": 18,
+      "maxDeliveryTime": 18,
+      "slaString": "18 MINS",
+      "lastMileTravel": 1.899999976158142,
+      "slugs": {
+        "restaurant": "shree-marutinandan-navrangpura-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "GF/06, THIRD EYE-2, OPP. PARIMAL GARDEN, PANCHAVATI PANCH RASTA, ELLISBRIDGE, AHMEDABAD,, Ahmedabad Municipal Corporation, Ahmedabad Municipal Corporation(Gujarat) -380015",
+      "locality": "Opp. Parimal Garden",
+      "parentId": 4934,
+      "unserviceable": false,
+      "veg": false,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": "Closes soon"
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.8 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "513580",
+        "deliveryTime": 18,
+        "minDeliveryTime": 18,
+        "maxDeliveryTime": 18,
+        "lastMileTravel": 1.899999976158142,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": false,
+      "avgRating": "4.0",
+      "totalRatings": 100,
+      "new": false
+    },
+    "subtype": "basic"
+  },
+  {
+    "type": "restaurant",
+    "data": {
+      "type": "F",
+      "id": "580135",
+      "name": "Baskin Robbins Happyness Shakes",
+      "uuid": "38d323f0-2739-4c8a-bf50-054a83839e24",
+      "city": "10",
+      "area": "Navrangpura",
+      "totalRatingsString": "Too Few Ratings",
+      "cloudinaryImageId": "iniamyqat7bthms7mkms",
+      "cuisines": [
+        "Desserts",
+        "Ice Cream"
+      ],
+      "tags": [
+        
+      ],
+      "costForTwo": 25000,
+      "costForTwoString": "₹250 FOR TWO",
+      "deliveryTime": 21,
+      "minDeliveryTime": 21,
+      "maxDeliveryTime": 21,
+      "slaString": "21 MINS",
+      "lastMileTravel": 1.7000000476837158,
+      "slugs": {
+        "restaurant": "baskin-robbins-happyness-shakes-navrangpura-navrangpura",
+        "city": "ahmedabad"
+      },
+      "cityState": "10",
+      "address": "Baskin Robbins, G/34,35,36 Paiki, Shree Krishna Complex, Mithakhali Six Road, Navrangpura, Ahmedabad, Gujarat - 380006",
+      "locality": "Navrangpura",
+      "parentId": 322848,
+      "unserviceable": false,
+      "veg": true,
+      "select": false,
+      "favorite": false,
+      "tradeCampaignHeaders": [
+        
+      ],
+      "ribbon": [
+        {
+          "type": "PROMOTED"
+        }
+      ],
+      "chain": [
+        
+      ],
+      "feeDetails": {
+        "fees": [
+          {
+            "name": "distance",
+            "fee": 2400,
+            "message": ""
+          },
+          {
+            "name": "time",
+            "fee": 0,
+            "message": ""
+          },
+          {
+            "name": "special",
+            "fee": 0,
+            "message": ""
+          }
+        ],
+        "totalFees": 2400,
+        "message": "",
+        "title": "Delivery Charge",
+        "amount": "2400",
+        "icon": ""
+      },
+      "availability": {
+        "opened": true,
+        "nextOpenMessage": "",
+        "nextCloseMessage": ""
+      },
+      "longDistanceEnabled": 0,
+      "rainMode": "NONE",
+      "thirdPartyAddress": false,
+      "thirdPartyVendor": "",
+      "adTrackingID": "cid=6788568~p=19~eid=00000188-61e4-3a1f-7b60-a1f40046136c",
+      "badges": {
+        "imageBased": [
+          
+        ],
+        "textBased": [
+          
+        ],
+        "textExtendedBadges": [
+          
+        ]
+      },
+      "lastMileTravelString": "1.7 kms",
+      "hasSurge": false,
+      "aggregatedDiscountInfoV3": {
+        "header": "30% OFF",
+        "subHeader": "UPTO ₹75",
+        "discountTag": "",
+        "headerTypeV2": 0
+      },
+      "sla": {
+        "restaurantId": "580135",
+        "deliveryTime": 21,
+        "minDeliveryTime": 21,
+        "maxDeliveryTime": 21,
+        "lastMileTravel": 1.7000000476837158,
+        "lastMileDistance": 0,
+        "serviceability": "SERVICEABLE",
+        "rainMode": "NONE",
+        "longDistance": "NOT_LONG_DISTANCE",
+        "preferentialService": false,
+        "iconType": "EMPTY"
+      },
+      "promoted": true,
+      "avgRating": "--",
+      "totalRatings": 0,
+      "new": false
+    },
+    "subtype": "basic"
+  }
+]
+
+const RestaurantCard = ({resData}) => {
+  const {cloudinaryImageId, name, cuisines, avgRating, slaString} = resData?.data;
+  return (
+    <div className="res-card">
+      <img 
+      className="res-logo"
+      alt="res-logo" src= {"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId}></img>
+    <h3>{name}</h3>
+    <h4>{cuisines.join(', ')}</h4>
+    <h4>{avgRating} ⭐</h4>
+    <h4>{slaString}</h4>
+    </div>
+  )
+}
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        {
+          cards.map((restaurant) => {return <RestaurantCard key={restaurant.data.id} resData = {restaurant} />})
+        }
+      </div>
+    </div>
+  )
+}
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+     <Header />
+     <Body />
+    </div>
+  )
+} 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
+

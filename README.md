@@ -17,8 +17,6 @@
 
 # Namste Food
 
-/\*\*
-
 - header
 - nav
 - logo

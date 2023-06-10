@@ -19,18 +19,17 @@
 
 /\*\*
 
-- `header`
-- - `nav`
-- -logo
+- header
+- nav
+- logo
 - Body
-- - search
-- - restaurant container
-- - restaurqnt cards
-- - Image
-- - name of the restaurant, Star ratings, cuisine, delivery time
+- search
+- restaurant container
+- restaurqnt cards
+- Image
+- name of the restaurant, Star ratings, cuisine, delivery time
 - footer
-- -copyrights
-- - links
-- - Address
-- - contact
-    \*/
+- copyrights
+- links
+- Address
+- contact

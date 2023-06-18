@@ -31,3 +31,8 @@
 - links
 - Address
 - contact
+
+# 2 types Routing in web apps
+
+- Client Side Routing
+- Server Side Routing

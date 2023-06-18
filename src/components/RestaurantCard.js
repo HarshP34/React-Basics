@@ -10,10 +10,10 @@ const RestaurantCard = ({ resData }) => {
         alt="res-logo"
         src={CDN_LINK + cloudinaryImageId}
       ></img>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating} ⭐</h4>
-      <h4>{slaString}</h4>
+      <h3 className="res-name">{name}</h3>
+      <h4 className="res-cuisines">{cuisines.join(", ")}</h4>
+      <h4 className="res-price">{avgRating} ⭐</h4>
+      <h4 className="res-rating">{slaString}</h4>
     </div>
   );
 };

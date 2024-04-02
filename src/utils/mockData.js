@@ -1650,4 +1650,749 @@ const cards = [
   },
 ];
 
+const latestCards = {
+  card: {
+    card: {
+      "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+      layout: {
+        columns: 4,
+      },
+      id: "restaurant_grid_listing",
+      gridElements: {
+        infoWithStyle: {
+          "@type":
+            "type.googleapis.com/swiggy.presentation.food.v2.FavouriteRestaurantInfoWithStyle",
+          restaurants: [
+            {
+              info: {
+                id: "38230",
+                name: "Shivam Bhojnalay",
+                cloudinaryImageId: "dryrg4zspcdmpbzdvtfp",
+                locality: "Gurukul",
+                areaName: "Ahmedabad",
+                costForTwo: "₹200 for two",
+                cuisines: [
+                  "Thalis",
+                  "Punjabi",
+                  "Gujarati",
+                  "North Indian",
+                  "Rajasthani",
+                  "Desserts",
+                ],
+                avgRating: 4,
+                veg: true,
+                parentId: "183566",
+                avgRatingString: "4.0",
+                totalRatingsString: "10K+",
+                sla: {
+                  deliveryTime: 22,
+                  lastMileTravel: 3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "22 mins",
+                  lastMileTravelString: "3.0 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-24 23:59:00",
+                  opened: true,
+                },
+                badges: {
+                  imageBadges: [
+                    {
+                      imageId: "v1695133679/badges/Pure_Veg111.png",
+                      description: "pureveg",
+                    },
+                  ],
+                },
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {
+                      badgeObject: [
+                        {
+                          attributes: {
+                            description: "pureveg",
+                            imageId: "v1695133679/badges/Pure_Veg111.png",
+                          },
+                        },
+                      ],
+                    },
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "60% OFF",
+                  discountTag: "FLAT DEAL",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/shivam-bhojnalay-gurukul-ahmedabad-ahmedabad-38230",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "37941",
+                name: "KFC",
+                cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
+                locality: "Vastrapur Lake",
+                areaName: "Vastrapur",
+                costForTwo: "₹400 for two",
+                cuisines: [
+                  "Burgers",
+                  "Biryani",
+                  "American",
+                  "Snacks",
+                  "Fast Food",
+                ],
+                avgRating: 4.2,
+                parentId: "547",
+                avgRatingString: "4.2",
+                totalRatingsString: "5K+",
+                sla: {
+                  deliveryTime: 23,
+                  lastMileTravel: 3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "23 mins",
+                  lastMileTravelString: "3.0 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 03:00:00",
+                  opened: true,
+                },
+                badges: {},
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "40% OFF",
+                  subHeader: "UPTO ₹80",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/kfc-lake-vastrapur-ahmedabad-37941",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "404427",
+                name: "La Pino'z Pizza",
+                cloudinaryImageId: "h9lpqchuffz5vvfzuup7",
+                locality: "Near Sundarnagar",
+                areaName: "VISHWESH TOWER NARANPURA",
+                costForTwo: "₹400 for two",
+                cuisines: [
+                  "Pizzas",
+                  "Pastas",
+                  "Italian",
+                  "Desserts",
+                  "Beverages",
+                ],
+                avgRating: 4.4,
+                veg: true,
+                parentId: "4961",
+                avgRatingString: "4.4",
+                totalRatingsString: "1K+",
+                sla: {
+                  deliveryTime: 17,
+                  lastMileTravel: 1.2,
+                  serviceability: "SERVICEABLE",
+                  slaString: "17 mins",
+                  lastMileTravelString: "1.2 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 03:00:00",
+                  opened: true,
+                },
+                badges: {
+                  imageBadges: [
+                    {
+                      imageId: "v1695133679/badges/Pure_Veg111.png",
+                      description: "pureveg",
+                    },
+                  ],
+                },
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {
+                      badgeObject: [
+                        {
+                          attributes: {
+                            description: "pureveg",
+                            imageId: "v1695133679/badges/Pure_Veg111.png",
+                          },
+                        },
+                      ],
+                    },
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "₹125 OFF",
+                  subHeader: "ABOVE ₹699",
+                  discountTag: "FLAT DEAL",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/la-pinoz-pizza-near-sundarnagar-vishwesh-tower-naranpura-ahmedabad-404427",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "114323",
+                name: "Iscon Thal",
+                cloudinaryImageId: "bd68ec66db6e8459145694c17f5aecde",
+                locality: "SG Road",
+                areaName: "Satellite",
+                costForTwo: "₹200 for two",
+                cuisines: [
+                  "Gujarati",
+                  "Thalis",
+                  "Indian",
+                  "Sweets",
+                  "Desserts",
+                  "Jain",
+                ],
+                avgRating: 4.4,
+                veg: true,
+                parentId: "107384",
+                avgRatingString: "4.4",
+                totalRatingsString: "10K+",
+                sla: {
+                  deliveryTime: 31,
+                  lastMileTravel: 6.3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "31 mins",
+                  lastMileTravelString: "6.3 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-24 22:15:00",
+                  opened: true,
+                },
+                badges: {
+                  imageBadges: [
+                    {
+                      imageId: "v1695133679/badges/Pure_Veg111.png",
+                      description: "pureveg",
+                    },
+                  ],
+                },
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {
+                      badgeObject: [
+                        {
+                          attributes: {
+                            description: "pureveg",
+                            imageId: "v1695133679/badges/Pure_Veg111.png",
+                          },
+                        },
+                      ],
+                    },
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "₹175 OFF",
+                  subHeader: "ABOVE ₹449",
+                  discountTag: "FLAT DEAL",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/iscon-thal-sg-road-satellite-ahmedabad-114323",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "49562",
+                name: "Season 9",
+                cloudinaryImageId: "nmtw1jxfhkurmmyosfly",
+                locality: "Shivalik Yash",
+                areaName: "Naranpura",
+                costForTwo: "₹300 for two",
+                cuisines: ["Indian", "Chinese", "Continental"],
+                avgRating: 4.2,
+                veg: true,
+                parentId: "179676",
+                avgRatingString: "4.2",
+                totalRatingsString: "10K+",
+                sla: {
+                  deliveryTime: 26,
+                  lastMileTravel: 1.3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "26 mins",
+                  lastMileTravelString: "1.3 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-24 23:00:00",
+                  opened: true,
+                },
+                badges: {
+                  imageBadges: [
+                    {
+                      imageId: "v1695133679/badges/Pure_Veg111.png",
+                      description: "pureveg",
+                    },
+                  ],
+                },
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {
+                      badgeObject: [
+                        {
+                          attributes: {
+                            description: "pureveg",
+                            imageId: "v1695133679/badges/Pure_Veg111.png",
+                          },
+                        },
+                      ],
+                    },
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "₹175 OFF",
+                  subHeader: "ABOVE ₹449",
+                  discountTag: "FLAT DEAL",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/season-9-shivalik-yash-naranpura-ahmedabad-49562",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "37686",
+                name: "McDonald's",
+                cloudinaryImageId: "bb7ae131544c7d37e10fc5faf76f09d6",
+                locality: "Navrangpura",
+                areaName: "Navrangpura",
+                costForTwo: "₹400 for two",
+                cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
+                avgRating: 4.4,
+                parentId: "630",
+                avgRatingString: "4.4",
+                totalRatingsString: "10K+",
+                sla: {
+                  deliveryTime: 17,
+                  lastMileTravel: 1.5,
+                  serviceability: "SERVICEABLE",
+                  slaString: "17 mins",
+                  lastMileTravelString: "1.5 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 02:45:00",
+                  opened: true,
+                },
+                badges: {},
+                isOpen: true,
+                aggregatedDiscountInfoV2: {},
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/mcdonalds-navrangpura-ahmedabad-37686",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "37556",
+                name: "Burger King",
+                cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+                locality: "Himalaya Mall, Gurukul",
+                areaName: "Memnagar",
+                costForTwo: "₹350 for two",
+                cuisines: ["Burgers", "American"],
+                avgRating: 4.2,
+                parentId: "166",
+                avgRatingString: "4.2",
+                totalRatingsString: "10K+",
+                sla: {
+                  deliveryTime: 25,
+                  lastMileTravel: 3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "25 mins",
+                  lastMileTravelString: "3.0 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 05:00:00",
+                  opened: true,
+                },
+                badges: {},
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "60% OFF",
+                  subHeader: "UPTO ₹120",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/burger-king-himalaya-mall-gurukul-memnagar-ahmedabad-37556",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "773472",
+                name: "Pizza Hut",
+                cloudinaryImageId: "978358a0d0caba4f4555b8e2147b467d",
+                locality: "Vastrapur Lake",
+                areaName: "Nexus mall",
+                costForTwo: "₹350 for two",
+                cuisines: ["Pizzas"],
+                avgRating: 4,
+                parentId: "721",
+                avgRatingString: "4.0",
+                totalRatingsString: "20+",
+                sla: {
+                  deliveryTime: 35,
+                  lastMileTravel: 3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "35 mins",
+                  lastMileTravelString: "3.0 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 00:00:00",
+                  opened: true,
+                },
+                badges: {},
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "ITEMS",
+                  subHeader: "AT ₹179",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                isNewlyOnboarded: true,
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/pizza-hut-vastrapur-lake-nexus-mall-ahmedabad-773472",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+            {
+              info: {
+                id: "640739",
+                name: "Virasat-E-Curry",
+                cloudinaryImageId: "96603898b3bee282c35811d3b2e8f22f",
+                locality: "Sunrise centre",
+                areaName: "Vastrapur",
+                costForTwo: "₹250 for two",
+                cuisines: [
+                  "North Indian",
+                  "Mughlai",
+                  "Tandoor",
+                  "Indian",
+                  "Punjabi",
+                  "Biryani",
+                  "Snacks",
+                  "Seafood",
+                  "Barbecue",
+                  "Grill",
+                  "Lucknowi",
+                  "Home Food",
+                  "Beverages",
+                  "Desserts",
+                  "Thalis",
+                ],
+                avgRating: 4.4,
+                veg: true,
+                parentId: "386420",
+                avgRatingString: "4.4",
+                totalRatingsString: "1K+",
+                sla: {
+                  deliveryTime: 31,
+                  lastMileTravel: 3,
+                  serviceability: "SERVICEABLE",
+                  slaString: "31 mins",
+                  lastMileTravelString: "3.0 km",
+                  iconType: "ICON_TYPE_EMPTY",
+                },
+                availability: {
+                  nextCloseTime: "2023-12-25 02:00:00",
+                  opened: true,
+                },
+                badges: {},
+                isOpen: true,
+                type: "F",
+                badgesV2: {
+                  entityBadges: {
+                    imageBased: {},
+                    textBased: {},
+                    textExtendedBadges: {},
+                  },
+                },
+                aggregatedDiscountInfoV3: {
+                  header: "₹125 OFF",
+                  subHeader: "ABOVE ₹499",
+                  discountTag: "FLAT DEAL",
+                },
+                orderabilityCommunication: {
+                  title: {},
+                  subTitle: {},
+                  message: {},
+                  customIcon: {},
+                },
+                differentiatedUi: {
+                  displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                  differentiatedUiMediaDetails: {
+                    mediaType: "ADS_MEDIA_ENUM_IMAGE",
+                    lottie: {},
+                    video: {},
+                  },
+                },
+                reviewsSummary: {},
+                displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                restaurantOfferPresentationInfo: {},
+              },
+              analytics: {
+                context: "seo-data-58ab30b8-92c0-4ba5-b059-c403c4364cda",
+              },
+              cta: {
+                link: "https://www.swiggy.com/restaurants/virasat-e-curry-sunrise-centre-vastrapur-ahmedabad-640739",
+                text: "RESTAURANT_MENU",
+                type: "WEBLINK",
+              },
+              widgetId:
+                "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
+            },
+          ],
+          theme: "SeoRestaurantListingGridWidget",
+        },
+      },
+    },
+  },
+};
 export default cards;

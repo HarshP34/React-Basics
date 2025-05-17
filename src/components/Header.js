@@ -1,23 +1,31 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
-  console.log("header rerender");
+  // console.log("header rerender");
 
   // Use Effect
   // If there is no dependency array in useEffect => it is called on every render.
   // If there is empty dependency array [] => it is called only on initial render.
   // If there is dependency array [btnNameReact] => it is called when btnNameReact is updated.
   useEffect(() => {
-    console.log("use Effect called");
+    // console.log("use Effect called");
   }, []);
 
 
   const onlineStatus = useOnlineStatus();
+  const { loggedInUser } = useContext(UserContext);
+  console.log(loggedInUser);
 
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
+  
   return (
     <div className="flex justify-between bg-gray-100 mb-1 shadow-lg" >
       <div className="logo-container">
@@ -48,7 +56,7 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li className="px-4 hover:text-sky-600 ">Cart</li>
+          <li className="px-4 hover:text-sky-600 font-semibold">Cart ({cartItems.length} Items)</li>
           <button
             className="px-4 py-1 m-4 bg-sky-500 hover:bg-sky-600 border border-solid border-black rounded-md"
             onClick={() => {

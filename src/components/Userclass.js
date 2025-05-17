@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
 
 class User extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class User extends React.Component {
   async componentDidMount() {
     const data = await fetch("https://api.github.com/users/HarshP34");
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     this.setState({
       userInfo: json,
     });
@@ -40,6 +41,11 @@ class User extends React.Component {
         <h2>Name:{login} </h2>
         <h3>Location:{location} </h3>
         <h3>Contact: @harshpatel</h3>
+        <div>
+          loggedInUser:<UserContext.Consumer>
+            {({loggedInUser}) => <h1>{loggedInUser}</h1>}
+          </UserContext.Consumer>
+        </div>
       </div>
     );
   }

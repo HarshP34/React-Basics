@@ -1,10 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 import cards from "../utils/mockData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link, json } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurantList from "../utils/useRestaurantList";
+import UserContext from "../utils/UserContext";
 // cards.sort((a, b) => {
 //   const aData = { ...a.data };
 //   const bData = { ...b.data };
@@ -25,7 +26,7 @@ const Body = () => {
   //   fetchData();
   // }, []);
   const resData = useRestaurantList(setListOfRestaurants, setFilteredRestaurants);
-  console.log("body render");
+  // console.log("body render");
   // const fetchData = async () => {
   //   const data = await fetch(
   //     // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.0521705&lng=72.54970689999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -46,6 +47,8 @@ const Body = () => {
   //       ?.restaurants
   //   );
   // }
+
+  const { setUserName, loggedInUser } = useContext(UserContext);
   if(resData == null) return <Shimmer />;
 
   if(!onlineStatus) return <h1>Opps!!! Looks like you are offline 🛜. Please check your Internet Connection. </h1>
@@ -89,7 +92,16 @@ const Body = () => {
           Top Rated Restaurant
         </button>
         </div>
+        <div className="search p-4 m-2 flex items-center">
+          <label className="">UserName :</label>
+          <input className="border border-black p-2" 
+          value={loggedInUser}
+          type="text"
+          placeholder="Enter your name"
+          onChange={(e) => setUserName(e.target.value)}/>
       </div>
+      </div>
+
       <div className="flex flex-wrap justify-start">
         {filteredRestaurants.map((restaurant) => {
           return (

@@ -41,12 +41,12 @@
 # 3 Setup the Jest Testing
 
 - Install React Testing Library
-- Install Jest
-- Install Babel Dependencies
-- Setup Babel config file
-- Set parcelrc file to avoid the babel parcel config conflict
+- Install Jest.
+- Install Babel Dependencies.
+- Setup Babel config file `babel.config.js`
+- Set `.parcelrc` file to avoid the babel parcel config conflict
 - Jest Configuration
-- Install jsdom library
-- Install @babel/preset-react for run jsx in test case
-- Add preset for @babel/preset-react in the babel.config file
-- Install @testing-library/jest-dom
+- Install `jest-environment-jsdom`
+- Install` @babel/preset-react` for run jsx in test case
+- Add preset for `@babel/preset-react` in the `babel.config` file
+- Install `@testing-library/jest-dom`

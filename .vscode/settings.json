@@ -5,5 +5,10 @@
     "markdown.preview.fontSize": 16,
     "debug.console.fontSize": 16,
     "editor.fontSize": 16,
-    "screencastMode.fontSize": 60
+    "screencastMode.fontSize": 60,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.formatOnSave": true,
 }

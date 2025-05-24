@@ -43,7 +43,7 @@ class User extends React.Component {
         <h3>Contact: @harshpatel</h3>
         <div>
           loggedInUser:<UserContext.Consumer>
-            {({loggedInUser}) => <h1>{loggedInUser}</h1>}
+            {({ loggedInUser }) => <h1>{loggedInUser}</h1>}
           </UserContext.Consumer>
         </div>
       </div>

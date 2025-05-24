@@ -18,14 +18,13 @@ const Header = () => {
     // console.log("use Effect called");
   }, []);
 
-
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
-  console.log(loggedInUser);
+  // console.log(loggedInUser);
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
-  
+  // console.log(cartItems);
+
   return (
     <div className="flex justify-between bg-gray-100 mb-1 shadow-lg" >
       <div className="logo-container">
@@ -56,7 +55,11 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li className="px-4 hover:text-sky-600 font-semibold">Cart ({cartItems.length} Items)</li>
+          <li className="px-4 hover:text-sky-600 font-semibold">
+            <Link className="link" to="/cart">
+              Cart ({cartItems.length} Items)
+            </Link>
+          </li>
           <button
             className="px-4 py-1 m-4 bg-sky-500 hover:bg-sky-600 border border-solid border-black rounded-md"
             onClick={() => {

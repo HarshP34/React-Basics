@@ -11,6 +11,7 @@ import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 // import Grocery from "./components/Grocery";
 
 
@@ -19,7 +20,7 @@ const AppLayout = () => {
   const [userName, setUserName] = useState();
 
   useEffect(()=>{
-    data = {
+    const data = {
       name: "Harsh Patel"
     }
     setUserName(data.name);
@@ -68,6 +69,10 @@ const appRouter = createBrowserRouter([
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+      }
     ],
     errorElement: <Error />,
   },

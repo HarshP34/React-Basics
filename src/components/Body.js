@@ -49,15 +49,16 @@ const Body = () => {
   // }
 
   const { setUserName, loggedInUser } = useContext(UserContext);
-  if(resData == null) return <Shimmer />;
+  if (resData == null) return <Shimmer />;
 
-  if(!onlineStatus) return <h1>Opps!!! Looks like you are offline 🛜. Please check your Internet Connection. </h1>
-  return(
+  if (!onlineStatus) return <h1>Opps!!! Looks like you are offline 🛜. Please check your Internet Connection. </h1>
+  return (
     <div className="body">
       <div className="filter flex justify-start">
         <div className="search p-4 m-2">
           <input
             type="text"
+            data-testid="search-input"
             className=" border border-solid border-black rounded-md"
             value={searchText}
             onChange={(e) => {
@@ -67,11 +68,11 @@ const Body = () => {
           <button
             className="px-4 py-1 bg-green-300 m-2 rounded-lg hover:bg-green-400"
             onClick={() => {
-                const filteredList = listOfRestaurants.filter((res) => {
-                  return res.info.name
-                    .toLowerCase()
-                    .includes(searchText.toLowerCase());
-                });
+              const filteredList = listOfRestaurants.filter((res) => {
+                return res.info.name
+                  .toLowerCase()
+                  .includes(searchText.toLowerCase());
+              });
               setFilteredRestaurants(filteredList);
               setSearchText("");
             }}
@@ -80,26 +81,26 @@ const Body = () => {
           </button>
         </div>
         <div className="search p-4 m-2 flex items-center">
-        <button
-          className="px-4 py-1 bg-blue-300 rounded-lg m-2 hover:bg-blue-400"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter((res) => {
-              return res.info.avgRating > 4.2;
-            });
-            setFilteredRestaurants(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
+          <button
+            className="px-4 py-1 bg-blue-300 rounded-lg m-2 hover:bg-blue-400"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter((res) => {
+                return res.info.avgRating > 4.2;
+              });
+              setFilteredRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
         </div>
         <div className="search p-4 m-2 flex items-center">
           <label className="">UserName :</label>
-          <input className="border border-black p-2" 
-          value={loggedInUser}
-          type="text"
-          placeholder="Enter your name"
-          onChange={(e) => setUserName(e.target.value)}/>
-      </div>
+          <input className="border border-black p-2"
+            value={loggedInUser}
+            type="text"
+            placeholder="Enter your name"
+            onChange={(e) => setUserName(e.target.value)} />
+        </div>
       </div>
 
       <div className="flex flex-wrap justify-start">

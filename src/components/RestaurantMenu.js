@@ -18,17 +18,11 @@ const RestaurantMenu = () => {
     resInfo?.cards[2]?.card?.card?.info;
   const catgories =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((card) => {
-        // return card?.card?.card?.title !== undefined;
-        return card?.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
-      }
+      return card?.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
+    }
     );
-    
-    
-    // changes in the swiggy api
-    // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards[1].card.info
-    // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.title
 
-  if(!onlineStatus) return <h1>Opps!!! Looks like you are offline 🛜. Please check your Internet Connection. </h1>
+  if (!onlineStatus) return <h1>Opps!!! Looks like you are offline 🛜. Please check your Internet Connection. </h1>
   return (
     <div className="menu">
       <h1 className="font-bold ml-[40rem] text-lg">{name}</h1>
@@ -38,12 +32,12 @@ const RestaurantMenu = () => {
       <div className="menu-category">
         {catgories
           ? catgories.map((category, index) => (
-              <RestaurantCategory key={category?.card?.card?.title} 
+            <RestaurantCategory key={category?.card?.card?.title}
               data={category?.card?.card}
               showItems={showIndex === index ? true : false}
-              setShowIndex={() => showIndex=== index ? setShowIndex(-1) : setShowIndex(index)}
-              />
-            ))
+              setShowIndex={() => showIndex === index ? setShowIndex(-1) : setShowIndex(index)}
+            />
+          ))
           : {}}
       </div>
     </div>
